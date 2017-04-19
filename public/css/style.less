@@ -1,0 +1,258 @@
+@import "ydbase";
+.continer{
+  .div_center;
+  //width: 95%;
+
+
+}
+/*index首页*/
+
+  .yh_index{
+    height: 100%;
+    background: url("../images/xingqiu_bg1.png")no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+    height: 100%;
+  }
+
+
+.yh_index_title{
+  box-sizing: border-box;
+  color: #ffffff;
+  padding-top: .15rem;
+  height: 0.55rem;
+  font-size: .3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  .text_center;
+
+}
+.yh_index_head{
+  position: relative;
+  text-align: center;
+  height: 2.45rem;
+  background:url("../images/feidie.png") no-repeat;
+  background-position:center;
+  -webkit-background-size:507/200rem 377/200rem;
+  background-size:507/200rem 377/200rem;
+
+  img{
+    border: none;
+    position: absolute;
+    width: 90/200rem;
+    height: 90/200rem;
+    background-color: yellow;
+    border-radius: 50%;
+    top: 60/100rem;
+    left: 138/100rem;
+  }
+}
+.yh_index_footer{
+  text-align: center;
+  a{
+    display: block;
+    margin: 0 auto;
+    width:380/200rem;
+    height: 90/200rem;
+    background-color: #ffcf1f;
+    border-radius: 0.15rem;
+    border:4px solid white;
+    line-height:70/200rem;
+    margin-bottom:0.2rem ;
+    font-weight: 600;
+    font-size: .16rem;
+  }
+}
+/*首页结束*/
+
+
+
+
+/*星球页面 xingxipage  */
+.yh_xingxi{
+  height: 100%;
+  background: url("../images/xingxi_bg.png")no-repeat;
+  -webkit-background-size:100%;
+  background-size:100%;
+  padding-top: 0.1rem;
+}
+.yh_page1_title{
+  text-align: center;
+  //background-color: skyblue;
+  h1{
+    padding-bottom: 34/200rem;
+    color: #ffffff;
+    font-size: 48/200rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  p{
+    width: 90%;
+    color: #ffffff;
+    text-indent: 2em;
+    text-align: left;
+    margin: 0 auto;
+    font-size: .12rem;
+    font-weight: 600;
+  }
+}
+.yh_page1_bigbox{
+  margin-top: -0.15rem;
+  position: relative;
+  height: 460/200rem;
+  width:640/200rem;
+  background-image:url("../images/tuoyuan.png") ;
+  background-repeat:no-repeat;
+  background-position: 0.4rem 0.29rem;
+  -webkit-background-size:518/200rem 316/200rem;
+  background-size:518/200rem 316/200rem;
+
+  .bigbox_title{
+    position:absolute;
+    font-size: 30/200rem;
+    font-weight: 500;
+    color: white;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  li{
+    display: table;
+    position: absolute;
+    width: 0rem;
+    height: 0rem;
+    top: -100%;
+    left: -100%;
+    //border-radius:50%;
+    background-repeat: no-repeat;
+    -webkit-background-size:contain;
+    background-size:contain;
+    background-position: center;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-weight: 500;
+    color: #7e5e00;
+    padding: 0 0.1rem;
+    //text-shadow:  0px 0px 10px #ffffff;
+    //*filter: Glow(color=#ffffff, strength=1);
+    -webkit-text-shadow:#ffffff 3px 0 0,#ffffff 0 3px 0,#ffffff -3px 0 0,#ffffff 0 -3px 0;
+    -moz-text-shadow:#ffffff 3px 0 0,#ffffff 0 3px 0,#ffffff -3px 0 0,#ffffff 0 -3px 0;
+    text-shadow:#ffffff 3px 0 0,#ffffff 0 3px 0,#ffffff -3px 0 0,#ffffff 0 -3px 0;
+    //*filter: Glow(Color=#ffffff, Strength=1);
+    span{
+      display: table-cell;
+      vertical-align:middle;
+      text-align:center;
+
+      width: .3rem;
+    }
+
+    &.yh_page1_li1{
+      background-image:url("../images/page1_1.png") ;
+
+      //transform:scale(1.5);
+    }
+    &.yh_page1_li2{
+
+      background-image:url("../images/page1_2.png") ;
+    }
+    &.yh_page1_li3{
+
+      background-image:url("../images/page1_3.png");
+    }
+    &.yh_page1_li4{
+
+      background-image:url("../images/page1_4.png");
+    }
+    &.yh_page1_li5{
+
+      background-image:url("../images/page1_5.png");
+    }
+    &.yh_page1_li6{
+
+      background-image:url("../images/page1_6.png");
+      }
+    &.yh_page1_li7{
+
+      background-image:url("../images/page1_7.png");
+    }
+  }
+}
+.yh_page_tips{
+  text-align: center;
+  color: white;
+  font-size: 0.10rem;
+  padding-top: 0.1rem;
+
+}
+.yh_foot_box{
+  width: 3.15rem;
+  height: 1.58rem;
+  margin: 0 auto;
+  padding-left: 0.05rem;
+  background-image: url("../images/page2_1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+
+  .yh_foot_title{
+    height: 0.34rem;
+    text-align: center;
+    padding-top: 0.18rem;
+    font-size: 0.15rem;
+    font-weight: 600;
+  }
+  .yh_page1_foot{
+
+    padding: 0.1rem .01rem;
+    li{
+      float: left;
+      width: 0.6rem;
+      font-size: .12rem;
+      .yh_apphead{
+        text-align: center;
+        img{
+          width: .35rem;
+          height: .35rem;
+        }
+        p{
+          padding-top:1px;
+          height: 0.17rem;
+          font-size: 0.10rem;
+          font-weight: 600;
+        }
+      }
+      .yh_appfoot{
+        letter-spacing: 0;
+        text-align: center;
+        p{
+            font-size: 0.08rem;
+        }
+      }
+    }
+
+  }
+}
+
+
+
+  .swiper-wrapper{
+    height: 1.97rem;
+    .swiper-slide{
+      text-align: center;
+      font-size: 18px;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+  }

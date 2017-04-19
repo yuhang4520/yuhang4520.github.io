@@ -1,0 +1,300 @@
+/* 通用样式 */
+*,
+::before,
+::after {
+  /*  */
+  margin: 0;
+  padding: 0;
+  /* 点击高亮效果 */
+  /* 手指点击 清除默认的 高亮效果 透明 */
+  -webkit-tap-highlight-color: transparent;
+  /* 盒子模型 */
+  /* 样式输入完毕 在后面tab */
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 统一设置文字  sans-serif 移动端 的默认字体 */
+  font-family: '微软雅黑', Helvetica;
+  border: none;
+}
+/* input标签 去掉默认样式 */
+input {
+  border: none;
+  -webkit-appearance: none;
+  /*轮廓线*/
+  outline: none;
+}
+/* a标签的下划线 */
+a {
+  text-decoration: none;
+}
+s,
+i,
+em {
+  font-style: normal;
+  text-decoration: none;
+}
+/* 去掉小圆点 */
+ol,
+ul {
+  list-style: none;
+}
+/* 清除浮动 */
+.f_l {
+  float: left;
+}
+.f_r {
+  float: right;
+}
+/* 清除浮动 */
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: block;
+  line-height: 0;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+/* 边框的 通用样式 */
+.b_l {
+  border-left: 1px solid #eee;
+}
+.b_r {
+  border-right: 1px solid #eee;
+}
+.b_t {
+  border-top: 1px solid #eee;
+}
+.b_b {
+  border-bottom: 1px solid #eee;
+}
+.dn {
+  display: none !important;
+}
+.div_center {
+  margin: 0 auto;
+}
+.text_center {
+  text-align: center;
+}
+.continer {
+  margin: 0 auto;
+}
+/*index首页*/
+.yh_index {
+  background: url("../images/xingqiu_bg1.png") no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  height: 100%;
+}
+.yh_index_title {
+  box-sizing: border-box;
+  color: #ffffff;
+  padding-top: .15rem;
+  height: 0.55rem;
+  font-size: .3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.yh_index_head {
+  position: relative;
+  text-align: center;
+  height: 2.45rem;
+  background: url("../images/feidie.png") no-repeat;
+  background-position: center;
+  -webkit-background-size: 2.535rem 1.885rem;
+  background-size: 2.535rem 1.885rem;
+}
+.yh_index_head img {
+  border: none;
+  position: absolute;
+  width: 0.45rem;
+  height: 0.45rem;
+  background-color: yellow;
+  border-radius: 50%;
+  top: 0.6rem;
+  left: 1.38rem;
+}
+.yh_index_footer {
+  text-align: center;
+}
+.yh_index_footer a {
+  display: block;
+  margin: 0 auto;
+  width: 1.9rem;
+  height: 0.45rem;
+  background-color: #ffcf1f;
+  border-radius: 0.15rem;
+  border: 4px solid white;
+  line-height: 0.35rem;
+  margin-bottom: 0.2rem ;
+  font-weight: 600;
+  font-size: .16rem;
+}
+/*首页结束*/
+/*星球页面 xingxipage  */
+.yh_xingxi {
+  height: 100%;
+  background: url("../images/xingxi_bg.png") no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  padding-top: 0.1rem;
+}
+.yh_page1_title {
+  text-align: center;
+}
+.yh_page1_title h1 {
+  padding-bottom: 0.17rem;
+  color: #ffffff;
+  font-size: 0.24rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.yh_page1_title p {
+  width: 90%;
+  color: #ffffff;
+  text-indent: 2em;
+  text-align: left;
+  margin: 0 auto;
+  font-size: .12rem;
+  font-weight: 600;
+}
+.yh_page1_bigbox {
+  margin-top: -0.15rem;
+  position: relative;
+  height: 2.3rem;
+  width: 3.2rem;
+  background-image: url("../images/tuoyuan.png");
+  background-repeat: no-repeat;
+  background-position: 0.4rem 0.29rem;
+  -webkit-background-size: 2.59rem 1.58rem;
+  background-size: 2.59rem 1.58rem;
+}
+.yh_page1_bigbox .bigbox_title {
+  position: absolute;
+  font-size: 0.15rem;
+  font-weight: 500;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.yh_page1_bigbox li {
+  display: table;
+  position: absolute;
+  width: 0rem;
+  height: 0rem;
+  top: -100%;
+  left: -100%;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: center;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 500;
+  color: #7e5e00;
+  padding: 0 0.1rem;
+  -webkit-text-shadow: #ffffff 3px 0 0, #ffffff 0 3px 0, #ffffff -3px 0 0, #ffffff 0 -3px 0;
+  -moz-text-shadow: #ffffff 3px 0 0, #ffffff 0 3px 0, #ffffff -3px 0 0, #ffffff 0 -3px 0;
+  text-shadow: #ffffff 3px 0 0, #ffffff 0 3px 0, #ffffff -3px 0 0, #ffffff 0 -3px 0;
+}
+.yh_page1_bigbox li span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: .3rem;
+}
+.yh_page1_bigbox li.yh_page1_li1 {
+  background-image: url("../images/page1_1.png");
+}
+.yh_page1_bigbox li.yh_page1_li2 {
+  background-image: url("../images/page1_2.png");
+}
+.yh_page1_bigbox li.yh_page1_li3 {
+  background-image: url("../images/page1_3.png");
+}
+.yh_page1_bigbox li.yh_page1_li4 {
+  background-image: url("../images/page1_4.png");
+}
+.yh_page1_bigbox li.yh_page1_li5 {
+  background-image: url("../images/page1_5.png");
+}
+.yh_page1_bigbox li.yh_page1_li6 {
+  background-image: url("../images/page1_6.png");
+}
+.yh_page1_bigbox li.yh_page1_li7 {
+  background-image: url("../images/page1_7.png");
+}
+.yh_page_tips {
+  text-align: center;
+  color: white;
+  font-size: 0.10rem;
+  padding-top: 0.1rem;
+}
+.yh_foot_box {
+  width: 3.15rem;
+  height: 1.58rem;
+  margin: 0 auto;
+  padding-left: 0.05rem;
+  background-image: url("../images/page2_1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.yh_foot_box .yh_foot_title {
+  height: 0.34rem;
+  text-align: center;
+  padding-top: 0.18rem;
+  font-size: 0.15rem;
+  font-weight: 600;
+}
+.yh_foot_box .yh_page1_foot {
+  padding: 0.1rem .01rem;
+}
+.yh_foot_box .yh_page1_foot li {
+  float: left;
+  width: 0.6rem;
+  font-size: .12rem;
+}
+.yh_foot_box .yh_page1_foot li .yh_apphead {
+  text-align: center;
+}
+.yh_foot_box .yh_page1_foot li .yh_apphead img {
+  width: .35rem;
+  height: .35rem;
+}
+.yh_foot_box .yh_page1_foot li .yh_apphead p {
+  padding-top: 1px;
+  height: 0.17rem;
+  font-size: 0.10rem;
+  font-weight: 600;
+}
+.yh_foot_box .yh_page1_foot li .yh_appfoot {
+  letter-spacing: 0;
+  text-align: center;
+}
+.yh_foot_box .yh_page1_foot li .yh_appfoot p {
+  font-size: 0.08rem;
+}
+.swiper-wrapper {
+  height: 1.97rem;
+}
+.swiper-wrapper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}

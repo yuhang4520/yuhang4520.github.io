@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>APP星球</title>
+    <meta name="viewport"
+          content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1.0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" type="text/css" href="../public/css/ydbase.css"/>
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../public/css/animate.css"/>
+    <script src="../public/js/rem.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+<div class="continer yh_xingxi">
+    <div class="yh_page1_title">
+        <h1 class="animated bounceInLeft">APP宇宙大揭秘</h1>
+        <p class="animated bounceInDown">浩瀚的APP宇宙中，有着好多庞大而复杂的星系。APP星球人生活在这里，其中最为庞大和丰富的星球在这里……</p>
+    </div>
+    <ul class="yh_page1_bigbox">
+        <div class="bigbox_title">生活系APP星系</div>
+        <li class="yh_page1_li1" data_yh="1" data_flag="0">餐饮美食1</li>
+        <li class="yh_page1_li2" data_yh="2">旅游出行2</li>
+        <li class="yh_page1_li3" data_yh="3">影院票务3</li>
+        <li class="yh_page1_li4" data_yh="4">医疗健康4</li>
+        <li class="yh_page1_li5" data_yh="5">网上购物5</li>
+        <li class="yh_page1_li6" data_yh="6">家居服务6</li>
+        <li class="yh_page1_li7" data_yh="7">生活综合7</li>
+    </ul>
+    <div class="yh_page_tips">
+            滑动星系查看星球版图
+    </div>
+    <div class="yh_foot_box">
+        <p class="yh_foot_title">
+            <span>生活综合</span>星球最受欢迎的生物
+        </p>
+        <ul class="yh_page1_foot">
+            <li>
+                <div class="yh_apphead">
+                    <img src="../public/images/kfc.png" alt="">
+                    <p>KFC</p>
+                </div>
+                <div class="yh_appfoot">
+                    <p><span>总流量:</span><span>1232M</span></p>
+                    <p><span>涨幅:</span><span>123123</span></p>
+                    <p><span>月活人数:</span><span>100万</span></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<script type="template" id="template">
+    <%for(var i = 0; i < list.length; i++) {%>
+    <li>
+        <div class="yh_apphead">
+            <img src="<%:=list[i].imgpath%>" alt="app图标">
+            <p><%:=list[i].name%></p>
+        </div>
+        <div class="yh_appfoot">
+            <p><span>总流量:</span><span><%:=list[i].liuliang%></span></p>
+            <p><span>涨幅:</span><span><%:=list[i].zhangfu%></span></p>
+            <p><span>月活人数:</span><span><%:=list[i].renshu%></span></p>
+        </div>
+    </li>
+    <%}%>
+
+</script>
+</body>
+</html>
+<script src="../public/js/tapsiwper.js"></script>
+<script src="../public/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="../public/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../public/js/template.js" type="text/javascript" charset="utf-8"></script>
+
+<!--动画相关js-->
+<script src="../public/js/xingxi.js"></script>
+<script>
+    $(function () {
+//        数据交互都在这个script里
+//    模拟数据格式 一共五条数据
+//参数说明  data_yh 分别对应
+ /*  1    餐饮美食
+     2    旅游出行
+     3    影院票务
+     4    医疗健康
+     5    网上购物
+     6    家居服务
+     7    生活综合
+         */
+
+
+
+        var yh_data=[
+            {
+                name:"KFC",
+                imgpath:"../public/images/kfc.png",
+                liuliang:"123M",
+                zhangfu:"12312",
+                renshu:"1万人"
+            },
+            {
+                name:"KFC",
+                imgpath:"../public/images/kfc.png",
+                liuliang:"123M",
+                zhangfu:"12312",
+                renshu:"1万人"
+            },
+            {
+                name:"KFC",
+                imgpath:"../public/images/kfc.png",
+                liuliang:"123M",
+                zhangfu:"12312",
+                renshu:"1万人"
+            },
+            {
+                name:"KFC",
+                imgpath:"../public/images/kfc.png",
+                liuliang:"123M",
+                zhangfu:"12312",
+                renshu:"1万人"
+            },
+            {
+                name:"KFC",
+                imgpath:"../public/images/kfc.png",
+                liuliang:"123M",
+                zhangfu:"12312",
+                renshu:"1万人"
+            }
+        ];
+
+
+        $(".yh_page1_bigbox").children("li").on("touchend",function () {
+            var xqname=$(this).text();
+            console.log(xqname)
+            //        点击星球改变title的文字
+            $(".yh_foot_title span").html(xqname)
+
+
+           var data_yh= $(this).attr("data_yh")
+            $.ajax({
+                url:"xxx.php",
+                method: "POST",
+                data: { "data_yh":data_yh },
+                dataType: "json"
+            }).done(function(data) {
+
+                var items={
+                    list:data
+                }
+
+                var tpl= $("#template").html()
+                var qwhtml= template(tpl,items);
+//                console.log(qwhtml)
+                $(".yh_page1_foot").html(qwhtml)
+
+
+            }).error(function () {
+
+                var items={
+                    list:yh_data
+                }
+
+                var tpl= $("#template").html()
+                var qwhtml= template(tpl,items);
+//                console.log(qwhtml)
+                $(".yh_page1_foot").html(qwhtml)
+
+            });
+
+
+
+
+        })
+
+//        var items={
+//            list:yh_data
+//        }
+//
+//        var tpl= $("#template").html()
+//        var qwhtml= template(tpl,items);
+//        console.log(qwhtml)
+//        $(".yh_page1_foot").html(qwhtml)
+
+
+
+
+    })
+
+</script>

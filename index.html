@@ -1,20 +1,49 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html class=" yh_index">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>余航的博客 </title>
-    <style>
-        h1,h2{
-            margin: 0 auto;
-            text-align: center;
-        }
-    </style>
+    <title>星球首页</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1.0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="stylesheet" type="text/css" href="public/css/animate.css" />
+
+    <link rel="stylesheet" type="text/css" href="public/css/style.css" />
+    <script src="public/js/rem.js" type="text/javascript" charset="utf-8"></script>
+
 </head>
+
 <body>
-<h1>欢迎来到余航的博客~~~</h1>
-<h2>哈哈哈</h2>
+    <div class="continer ">
+        <div class="yh_index_title animated tada">
+            APP宇宙大揭秘
+        </div>
+        <div class="yh_index_head animated bounceInLeft">
+            <img src="" alt="">
+        </div>
+        <div class="yh_index_footer">
+            <a href="./page/xingxipage1.html">开始探秘之旅</a>
+            <a href="#">我是那种APP星球ET</a>
+        </div>
+    </div>
+
+
+
+
 </body>
+
 </html>
+<script src="public/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    $.ajax({
+        method: "GET",
+        url: "some.php",
+        data: "",
+    }).done(function( msg ) {
+        $(".yh_index_head img").attr("src",msg)
+    });
+
+
+</script>
